@@ -2,10 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const RegistrationSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
+
   email: {
     type: String,
     required: true,
@@ -15,10 +12,23 @@ const RegistrationSchema = new Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: Date.now
-  }
+  restaurant: [
+    {
+      restaurantname: String,
+      menuitems:
+      [
+        {
+          itemname: String,
+          itemdescription: String,
+          image: String,
+          itemprice: Number,
+          itemallergies: String,
+          itemcalories: Number
+        }
+      ]
+    }
+  ]
+
 })
 
 const Registration = mongoose.model('registration', RegistrationSchema)

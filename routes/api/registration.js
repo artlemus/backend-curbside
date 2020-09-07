@@ -8,7 +8,7 @@ const Registration = require('../../models/Registration')
 router.post(
   '/',
   [
-    check('name', 'Name is required').not().isEmpty(),
+    check('restaraunt', 'Restaurant is required').not().isArray(),
     check('email', 'Please include a valid email').isEmail(),
     check('password', 'Password is Required').isLength({ min: 8 })
   ],
@@ -18,7 +18,7 @@ router.post(
       return res.status(422).json({ errors: errors.array() })
     }
 
-    const { name, email, password } = req.body
+    const { restaurant, email, password } = req.body
 
     try {
       let registration = await Registration.findOne({ email })
@@ -30,7 +30,7 @@ router.post(
       }
 
       registration = new Registration({
-        name,
+        restaurant,
         email,
         password
       })
