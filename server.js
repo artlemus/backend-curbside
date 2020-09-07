@@ -12,9 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/restaurants/account/new', require('./routes/api/login'))
-app.use(
-  '/api/v1/restaurant-registration/',
-  require('./routes/api/registration')
+app.use('/api/v1/restaurant-registration/', require('./routes/api/registration')
 )
 
 // app.use('/api/restaurants/account/new', require('./routes/api/profile'));

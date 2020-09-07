@@ -28,6 +28,7 @@ const RegistrationSchema = new Schema({
       ]
     }
   ]
+
 })
 
 const Registration = mongoose.model('registration', RegistrationSchema)
