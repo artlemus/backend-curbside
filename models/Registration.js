@@ -21,9 +21,9 @@ const RegistrationSchema = new Schema({
           itemname: String,
           itemdescription: String,
           image: String,
-          itemprice: String,
+          itemprice: Number,
           itemallergies: String,
-          itemcalories: String
+          itemcalories: Number
         }
       ]
     }
