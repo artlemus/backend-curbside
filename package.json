@@ -8,20 +8,24 @@
     "server": "nodemon server",
     "test": "standard && node"
   },
+  "engines": {
+    "node": "14.4.0"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/crossblue/Curbside.git"
+    "url": "git+https://github.com/artlemus/backend-curbside.git"
   },
-  "author": "Kennth Judd",
+  "author": "Arturo Lemus Jr",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/crossblue/Curbside/issues"
+    "url": "https://github.com//artlemus/backend-curbside/issues"
   },
-  "homepage": "https://github.com/crossblue/Curbside#readme",
+  "homepage": "https://github.com//artlemus/backend-curbside#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "config": "^3.3.1",
     "core-util-is": "^1.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
