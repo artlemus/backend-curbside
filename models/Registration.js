@@ -18,12 +18,13 @@ const RegistrationSchema = new Schema({
       menuitems:
       [
         {
-          itemname: String,
-          itemdescription: String,
+          name: String,
+          description: String,
+          allergies: String,
+          price: Number,
           image: String,
-          itemprice: Number,
-          itemallergies: String,
-          itemcalories: Number
+          calories: Number,
+          category: String
         }
       ]
     }
@@ -31,5 +32,6 @@ const RegistrationSchema = new Schema({
 
 })
 
-const Registration = mongoose.model('registration', RegistrationSchema)
-module.exports = Registration
+const registrationModel = mongoose.model('registration', RegistrationSchema)
+
+module.exports = registrationModel
