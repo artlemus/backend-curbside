@@ -1,5 +1,5 @@
 const express = require('express')
-const registrationRoutes = require('./routes/registration.routes')
+const userRoutes = require('./routes/user.routes')
 const app = express()
 const mongoDB = require('./config/db')
 
@@ -10,7 +10,7 @@ app.options('*', cors())
 
 app.use(express.json({ extended: false }))
 
-app.use('/api/accounts', registrationRoutes)
+app.use('/api/v1/', userRoutes)
 
 app.use((error, req, res, next) => {
   res.status(500).json({ message: error.message })

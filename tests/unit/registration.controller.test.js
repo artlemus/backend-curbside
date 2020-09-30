@@ -1,9 +1,9 @@
 const registrationController = require('../../controllers/registration.controller')
-const registrationModel = require('../../models/Registration')
+const registrationModel = require('../../models/User')
 const httpMocks = require('node-mocks-http')
 const newUser = require('../mock-data/new-user.json')
 
-jest.mock('../../models/registration')
+jest.mock('../../models/User')
 
 let req, res, next
 
