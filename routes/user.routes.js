@@ -1,5 +1,4 @@
 const express = require('express')
-<<<<<<< HEAD
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 
@@ -79,14 +78,5 @@ router.post('/login', async (req, res, next) => {
     next(err)
   }
 })
-=======
-const registrationController = require('../controllers/registration.controller')
-const loginController = require('../controllers/login.controller')
-const router = express.Router()
-
-
-router.post('/user/create', registrationController.registerUser)
-router.post('/user/login', loginController.loginUser)
->>>>>>> d7fd8e2f9d2354ab2becfe3d5034400d794d1eb0
 
 module.exports = router
