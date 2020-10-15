@@ -1,6 +1,4 @@
 module.exports = {
-  modulePaths: [
-    '<rootDir>'
-  ],
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+  verbose: true
 }
