@@ -15,6 +15,7 @@ const RegistrationSchema = new Schema({
     type: Boolean,
     required: true
   }
+
 })
 
 const registrationModel = mongoose.model('registration', RegistrationSchema)
